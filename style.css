@@ -1,0 +1,178 @@
+/* ---------------------------------- */
+@charset "UTF-8";
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: gainsboro;
+    /* 固定表示 */
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+body {
+    line-height: 25px;
+    font-size: 0.9em;
+    font-family: "Lato", "Noto Sans JP", Helvetica, "游ゴシック", "Yu Gothic", YuGothic, HiraKakuProN-W3, "メイリオ", Meiryo, sans-serif;
+}
+
+.container {
+    padding-top: 100px;
+}
+
+.smalltext {
+    font-size: 0.8em;
+}
+
+.works-img {
+    max-height: 400px;
+    object-fit: scale-down;
+    padding: 25px;
+    display: block;
+    margin: auto;
+}
+
+/* ----------- card ----------------------- */
+
+.card-img,
+.card-img-top {
+    max-height: 200px;
+    object-fit: scale-down;
+    padding: 25px;
+}
+
+
+/* ----------- badge ----------------------- */
+
+.badge-cstm {
+    padding: 5px 10px;
+    height: 35px;
+    display: inline;
+    margin: 5px;
+}
+
+.subbadge-cstm {
+    margin-left: 10px;
+    display: inline;
+    font-weight: 100;
+    border-radius: 0.1rem;
+    padding: 0.1em 0.6em;
+}
+
+/* ----------- works ----------------------- */
+/* アクティブな画像の枠線を変更 */
+.sub-img li.current img {
+    border: 2px solid red;
+    transition: border .5s;
+}
+
+/* レイアウトのためのスタイル */
+.container-works {
+    margin: 10px auto 0;
+    max-width: 800px;
+    /* max-width: 500px; */
+}
+
+.main-img {
+    /* height: 334px; */
+    min-height: 250px;
+    max-height: 450px;
+    width: 100%;
+}
+
+.main-img img {
+    /* height: auto;
+    width: 100%; */
+    min-height: 250px;
+    max-height: 450px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.sub-img {
+    display: flex;
+    margin-top: 10px;
+
+    list-style-type: none;
+}
+
+.sub-img li {
+    /* margin-right: 2%; */
+    width: calc(96% / 4);
+}
+
+.sub-img li:nth-child(3n) {
+    margin-right: 0;
+}
+
+.sub-img li img {
+    border: 2px solid transparent;
+    transition: border .5s;
+}
+
+.sub-img img {
+    cursor: pointer;
+    width: 100%;
+}
+
+
+
+/* ----------- h ----------------------- */
+
+h2 {
+    border-bottom: 2px solid #333;
+    color: #333;
+    font-size: 16px;
+    margin: 30px auto;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+
+h3 {
+    border-bottom: 2px dashed #333;
+    color: #333;
+    font-size: 14px;
+    margin: 30px auto;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+
+
+/* ----------- nav ----------------------- */
+
+/* .navbar {
+    position: fixed;
+    background-color: gainsboro;
+} */
+
+.navbar a.nav-link:hover {
+    color: #333;
+    border-bottom: 2px solid #333;
+    /* background-color: ghostwhite; */
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+
+/* ----------- footer ----------------------- */
+
+footer .container {
+    border-top: 2px solid rgba(144, 130, 109, 0.2);
+    color: #999;
+    padding: 20px 0px;
+    font-size: 10px;
+    margin-top: 50px;
+    text-align: center;
+}
