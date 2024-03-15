@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- ページのタイトル -->
+    <title>ポートフォリオサイト</title>
+
+</head>
+
+<body class="container" id="top">
+
+    <header>
+        <!-- ナビゲーション -->
+        <!-- <nav class="navbar navbar-expand-lg navbar-light py-5"> -->
+        <nav class="container py-4 navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="/index.html">MY PORTFOLIO</a>
+
+        </nav>
+    </header>
+
+    <h2>福岡vs名古屋</h2>
+
+    <!-- <div class="col s12 m8">
+
+        <div class="mainImage">
+            <img src="/img/otomodati.png" class="works-img" alt="「おともだち」のタイトルシーン">
+        </div>
+
+        <div class="thumbnails">
+            <img src="/img/otomodati.png" class="works-img" alt="「おともだち」のタイトルシーン">
+            <img src="/img/otomodati.png" class="works-img" alt="「おともだち」のタイトルシーン">
+            <img src="/img/otomodati.png" class="works-img" alt="「おともだち」のタイトルシーン">
+        </div>
+        
+    </div> -->
+    <div class="container-works">
+        <!-- メイン画像 -->
+        <div class="main-img js-main-img">
+            <img src="/img/vsFukuoka_title.png" alt="「おともだち」のタイトルシーン" />
+        </div>
+        <!-- サムネイル画像 -->
+        <ul class="sub-img js-sub-img">
+            <!-- 選択されている画像の枠線を変更 -->
+            <li class="current">
+                <img src="/img/vsFukuoka_title.png" alt="「おともだち」のタイトルシーン" />
+            </li>
+            <li>
+                <img src="/img/otomodati-novel.png" alt="「おともだち」のノベルシーン" />
+            </li>
+            <li>
+                <img src="/img/otomodati-mystery.png" alt="「おともだち」の謎解きシーン" />
+            </li>
+            <li>
+                <img src="/img/otomodati-item.png" alt="「おともだち」のアイテムゲットシーン" />
+            </li>
+        </ul>
+
+        <p>
+            ミニゲーム <br>
+            十字キーでキャラクターを操作。
+            会話をしたり、部屋を調べたりしてアイテムを集め、部屋の謎を解こう！
+            <ul class="smalltext">
+                <li>開発環境
+                    <ul>
+                        <li>Windows10(64bit)
+                            <ul>
+                                <li>プロセッサー　インテル Corei5-1135G7</li>
+                                <li>メモリ 8GB</li>
+                                <li>グラフィック Intel Iris X Graphics(CPU内蔵)</li>
+                            </ul>
+                        </li>
+                        <li>Processing 3 (3.5.4)</li>
+                        <li>チームメンバーとのデータ共有にGitHubを利用</li>
+                    </ul>
+                </li>
+                <li>動作確認を行った機材
+                    <ul>
+                        <li>Windows10(64bit)
+                            <ul>
+                                <li>プロセッサー　インテル Corei5-1135G7</li>
+                                <li>メモリ 8GB</li>
+                                <li>グラフィック Intel Iris X Graphics(CPU内蔵)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>操作方法
+                    <ul>
+                        <li>ノベルパートでのストーリー送り: マウスクリック</li>
+                        <li>主人公の女の子の操作: 上下左右キー</li>
+                        <li>物を調べる, ドアを開ける: Enterキー</li>
+                        <li>時計の針を進める: 左右キー</li>
+                        <li>ゲームを終了する: Escキー</li>
+                    </ul>
+                </li>
+            </ul>
+        </p>
+    </div>
+
+
+    <!-- BACK TO TOP -->
+    <div class="text-center py-8">
+        <a href="#top" class="text-muted">
+            <i class="fas fa-angle-up fa-3x" style="color:#686868;"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 山口奈央</p>
+        </div>
+    </footer>
+
+
+    <!-- スクリプト -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $(".js-sub-img img").on("click", function () {
+                // メイン画像に切り替えるimgのsrc取得
+                img = $(this).attr("src");
+                // currentクラス付け替え(枠線などを変えたい時に)
+                $(".js-sub-img li").removeClass("current");
+                $(this).parent().addClass("current");
+                // fadeOutできたらsrc変更してfadeIn
+                $(".js-main-img img").fadeOut(300, function () {
+                    $(".js-main-img img")
+                        .attr("src", img)
+                        .on("load", function () {
+                            $(this).fadeIn(500);
+                        });
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
