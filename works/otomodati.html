@@ -9,6 +9,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/portfolio_ny/css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/css/style.css"> -->
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -48,21 +49,26 @@
         <!-- メイン画像 -->
         <div class="main-img js-main-img">
             <img src="/portfolio_ny/img/otomodati.png" alt="「おともだち」のタイトルシーン" />
+            <!-- <img src="/img/otomodati.png" alt="「おともだち」のタイトルシーン" /> -->
         </div>
         <!-- サムネイル画像 -->
         <ul class="sub-img js-sub-img">
             <!-- 選択されている画像の枠線を変更 -->
             <li class="current">
                 <img src="/portfolio_ny/img/otomodati.png" alt="「おともだち」のタイトルシーン" />
+                <!-- <img src="/img/otomodati.png" alt="「おともだち」のタイトルシーン" /> -->
             </li>
             <li>
                 <img src="/portfolio_ny/img/otomodati-novel.png" alt="「おともだち」のノベルシーン" />
+                <!-- <img src="/img/otomodati-novel.png" alt="「おともだち」のノベルシーン" /> -->
             </li>
             <li>
                 <img src="/portfolio_ny/img/otomodati-mystery.png" alt="「おともだち」の謎解きシーン" />
+                <!-- <img src="/img/otomodati-mystery.png" alt="「おともだち」の謎解きシーン" /> -->
             </li>
             <li>
                 <img src="/portfolio_ny/img/otomodati-item.png" alt="「おともだち」のアイテムゲットシーン" />
+                <!-- <img src="/img/otomodati-item.png" alt="「おともだち」のアイテムゲットシーン" /> -->
             </li>
         </ul>
 
@@ -156,6 +162,22 @@
         //         });
         //     });
         // });
+        // $(function () {
+        //     $(".js-sub-img img").on("click", function () {
+        //         // メイン画像に切り替えるimgのsrc取得
+        //         img = $(this).attr("src");
+        //         // currentクラス付け替え(枠線などを変えたい時に)
+        //         $(".js-sub-img li").removeClass("current");
+        //         $(this).parent().addClass("current");
+        //         // メイン画像をフェードアウトしてからsrc変更
+        //         $(".js-main-img img").fadeOut(300, function () {
+        //             // 新しい画像を読み込む前にフェードイン
+        //             $(this).attr("src", img).on("load", function () {
+        //                 $(this).fadeIn(500);
+        //             });
+        //         });
+        //     });
+        // });
         $(function () {
             $(".js-sub-img img").on("click", function () {
                 // メイン画像に切り替えるimgのsrc取得
@@ -163,10 +185,16 @@
                 // currentクラス付け替え(枠線などを変えたい時に)
                 $(".js-sub-img li").removeClass("current");
                 $(this).parent().addClass("current");
+
+                // サムネイル画像が読み込まれる前にメイン画像の高さを取得
+                var mainImageHeight = $(".js-main-img img").height();
+
                 // メイン画像をフェードアウトしてからsrc変更
                 $(".js-main-img img").fadeOut(300, function () {
                     // 新しい画像を読み込む前にフェードイン
                     $(this).attr("src", img).on("load", function () {
+                        // メイン画像の高さを調整してフェードイン
+                        $(".js-main-img").css("height", mainImageHeight); // メイン画像の高さを設定
                         $(this).fadeIn(500);
                     });
                 });

@@ -103,7 +103,13 @@ body {
 
 .sub-img li {
     /* margin-right: 2%; */
-    width: calc(96% / 4);
+    /* width: calc(96% / 4); */
+
+    width: calc(25% - 10px); /* サムネイル画像の幅とマージンを考慮して調整 */
+    /* margin-right: 10px; */
+    position: relative; /* 親要素に相対位置を設定 */
+    overflow: hidden;
+    min-height: 100px; /* サムネイル画像の最小高さ */
 }
 
 .sub-img li:nth-child(3n) {
@@ -113,6 +119,9 @@ body {
 .sub-img li img {
     border: 2px solid transparent;
     transition: border .5s;
+
+    width: 100%;
+    height: auto;
 }
 
 .sub-img img {
