@@ -139,6 +139,23 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
     <script>
+        // $(function () {
+        //     $(".js-sub-img img").on("click", function () {
+        //         // メイン画像に切り替えるimgのsrc取得
+        //         img = $(this).attr("src");
+        //         // currentクラス付け替え(枠線などを変えたい時に)
+        //         $(".js-sub-img li").removeClass("current");
+        //         $(this).parent().addClass("current");
+        //         // fadeOutできたらsrc変更してfadeIn
+        //         $(".js-main-img img").fadeOut(300, function () {
+        //             $(".js-main-img img")
+        //                 .attr("src", img)
+        //                 .on("load", function () {
+        //                     $(this).fadeIn(500);
+        //                 });
+        //         });
+        //     });
+        // });
         $(function () {
             $(".js-sub-img img").on("click", function () {
                 // メイン画像に切り替えるimgのsrc取得
@@ -146,13 +163,12 @@
                 // currentクラス付け替え(枠線などを変えたい時に)
                 $(".js-sub-img li").removeClass("current");
                 $(this).parent().addClass("current");
-                // fadeOutできたらsrc変更してfadeIn
+                // メイン画像をフェードアウトしてからsrc変更
                 $(".js-main-img img").fadeOut(300, function () {
-                    $(".js-main-img img")
-                        .attr("src", img)
-                        .on("load", function () {
-                            $(this).fadeIn(500);
-                        });
+                    // 新しい画像を読み込む前にフェードイン
+                    $(this).attr("src", img).on("load", function () {
+                        $(this).fadeIn(500);
+                    });
                 });
             });
         });
