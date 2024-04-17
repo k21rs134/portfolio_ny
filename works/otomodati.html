@@ -201,27 +201,45 @@
         //     });
         // });
         $(function () {
-        // 最初のメイン画像の高さを取得
-        var mainImageHeight = $(".js-main-img img").height();
+            // 最初のメイン画像の高さを取得
+            var mainImageHeight = $(".js-main-img img").height();
 
-        $(".js-sub-img img").on("click", function () {
-            // メイン画像に切り替えるimgのsrc取得
-            img = $(this).attr("src");
-            // currentクラス付け替え(枠線などを変えたい時に)
-            $(".js-sub-img li").removeClass("current");
-            $(this).parent().addClass("current");
+            $(".js-sub-img img").on("click", function () {
+                // メイン画像に切り替えるimgのsrc取得
+                img = $(this).attr("src");
+                // currentクラス付け替え(枠線などを変えたい時に)
+                $(".js-sub-img li").removeClass("current");
+                $(this).parent().addClass("current");
 
-            // メイン画像をフェードアウトしてからsrc変更
-            $(".js-main-img img").fadeOut(300, function () {
-                // 新しい画像を読み込む前にフェードイン
-                $(this).attr("src", img).on("load", function () {
-                    // メイン画像の高さを調整してフェードイン
-                    $(".js-main-img").css("height", mainImageHeight); // メイン画像の高さを設定
-                    $(this).fadeIn(500);
+                // メイン画像をフェードアウトしてからsrc変更
+                $(".js-main-img img").fadeOut(300, function () {
+                    // 新しい画像を読み込む前にフェードイン
+                    $(this).attr("src", img).on("load", function () {
+                        // メイン画像の高さを調整してフェードイン
+                        $(".js-main-img").css("height", mainImageHeight); // メイン画像の高さを設定
+                        $(this).fadeIn(500);
+                    });
                 });
             });
         });
-    });
+        // $(function () {
+        //     $(".js-sub-img img").on("click", function () {
+        //         // メイン画像に切り替えるimgのsrc取得
+        //         img = $(this).attr("src");
+        //         // currentクラス付け替え(枠線などを変えたい時に)
+        //         $(".js-sub-img li").removeClass("current");
+        //         $(this).parent().addClass("current");
+
+        //         // メイン画像をフェードアウト
+        //         $(".js-main-img img").fadeOut(400);
+
+        //         // 新しい画像をメイン画像に設定してからフェードイン
+        //         $(".js-main-img img").attr("src", img).on("load", function () {
+        //             // メイン画像をフェードイン
+        //             $(this).fadeIn(500);
+        //         });
+        //     });
+        // });
     </script>
 
 
