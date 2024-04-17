@@ -104,9 +104,8 @@ body {
 .sub-img li {
     /* margin-right: 2%; */
     width: calc(96% / 4);
-    position: relative; /* 追加 *//* 親要素に相対位置を設定 */
+    position: relative; /* 追加 */
     overflow: hidden; /* 追加 */
-    min-height: 100px; /* サムネイル画像の最小高さ */
 }
 
 .sub-img li:nth-child(3n) {
@@ -116,17 +115,11 @@ body {
 .sub-img li img {
     border: 2px solid transparent;
     transition: border .5s;
-
-    /* position: absolute;
-    top: 0; 
-    left: 0; 
-    width: 100%;
-    height: 100%; */
-
-    border: 2px solid transparent;
-    transition: border .5s;
-    width: 100%;
-    height: auto;
+    position: absolute; /* 追加 */
+    top: 0; /* 追加 */
+    left: 0; /* 追加 */
+    width: 100%; /* 追加 */
+    height: 100%; /* 追加 */
 }
 
 .sub-img img {
