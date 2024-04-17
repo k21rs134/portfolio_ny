@@ -104,6 +104,8 @@ body {
 .sub-img li {
     /* margin-right: 2%; */
     width: calc(96% / 4);
+    position: relative; /* 追加 */
+    overflow: hidden; /* 追加 */
 }
 
 .sub-img li:nth-child(3n) {
@@ -113,6 +115,11 @@ body {
 .sub-img li img {
     border: 2px solid transparent;
     transition: border .5s;
+    position: absolute; /* 追加 */
+    top: 0; /* 追加 */
+    left: 0; /* 追加 */
+    width: 100%; /* 追加 */
+    height: 100%; /* 追加 */
 }
 
 .sub-img img {
