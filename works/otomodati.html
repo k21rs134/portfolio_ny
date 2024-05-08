@@ -8,8 +8,8 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/portfolio_ny/css/style.css">
-    <!-- <link rel="stylesheet" type="text/css" href="/css/style.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="/portfolio_ny/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -50,26 +50,52 @@
         <div class="main-img js-main-img">
             <img src="/portfolio_ny/img/otomodati.png" alt="「おともだち」のタイトルシーン" />
             <!-- <img src="/img/otomodati.png" alt="「おともだち」のタイトルシーン" /> -->
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/8qxqlXGfT-I?si=_v_jcvmCuqSl1nTD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
         </div>
+
         <!-- サムネイル画像 -->
         <ul class="sub-img js-sub-img">
             <!-- 選択されている画像の枠線を変更 -->
             <li class="current">
                 <img src="/portfolio_ny/img/otomodati.png" alt="「おともだち」のタイトルシーン" />
-                <!-- <img src="/img/otomodati.png" alt="「おともだち」のタイトルシーン" /> -->
             </li>
             <li>
                 <img src="/portfolio_ny/img/otomodati-novel.png" alt="「おともだち」のノベルシーン" />
-                <!-- <img src="/img/otomodati-novel.png" alt="「おともだち」のノベルシーン" /> -->
             </li>
             <li>
                 <img src="/portfolio_ny/img/otomodati-mystery.png" alt="「おともだち」の謎解きシーン" />
-                <!-- <img src="/img/otomodati-mystery.png" alt="「おともだち」の謎解きシーン" /> -->
             </li>
             <li>
                 <img src="/portfolio_ny/img/otomodati-item.png" alt="「おともだち」のアイテムゲットシーン" />
-                <!-- <img src="/img/otomodati-item.png" alt="「おともだち」のアイテムゲットシーン" /> -->
             </li>
+
+             
+            <!-- <li class="current">
+                <img src="/img/otomodati.png" alt="「おともだち」のタイトルシーン" />
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8qxqlXGfT-I?si=_v_jcvmCuqSl1nTD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                <!-- <a href="#" data-video-id="8qxqlXGfT-I?si=_v_jcvmCuqSl1nTD">
+                    <img src="https://www.youtube.com/embed/8qxqlXGfT-I?si=_v_jcvmCuqSl1nTD" alt="サムネイル画像の説明">
+                </a> -->
+                <!-- <div class="video-preview" data-video-id="8qxqlXGfT-I?si=_v_jcvmCuqSl1nTD">
+                    <img src="https://www.youtube.com/embed/8qxqlXGfT-I?si=_v_jcvmCuqSl1nTD" alt="サムネイル画像の説明">
+                </div> -->
+                <!-- <div class="video-preview" data-video-id="8qxqlXGfT-I?si=_v_jcvmCuqSl1nTD">
+                    //動画プレーヤーのプレビュー画像（サムネイル）
+                    <img src="https://www.youtube.com/embed/8qxqlXGfT-I?si=_v_jcvmCuqSl1nTD" alt="サムネイル画像の説明">
+                    //再生ボタンなどの要素 
+                    <button class="play-button">再生</button>
+                </div>
+            </li>
+            <li>
+                <img src="/img/otomodati-novel.png" alt="「おともだち」のノベルシーン" />
+            </li>
+            <li>
+                <img src="/img/otomodati-mystery.png" alt="「おともだち」の謎解きシーン" />
+            </li>
+            <li>
+                <img src="/img/otomodati-item.png" alt="「おともだち」のアイテムゲットシーン" />
+            </li>
+             -->
         </ul>
 
         <p>
@@ -79,6 +105,13 @@
         <p>
             大学１年次に理工学部（プログラマー）３人、芸術学部（デザイナー）２人でチームを組み、全員未経験の状態から製作。
 
+        </p>
+        <p class="text-center">
+            --------------------------------------------------<br>
+            芸術学部の学生が制作した
+            <a href="http://miiir-nishiym.github.io/otomodachi/" style="color:blue;">おともだちWEBのサイト</a>、PVもあります！　↓↓↓
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8qxqlXGfT-I?si=_v_jcvmCuqSl1nTD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+            --------------------------------------------------
         </p>
 
         <ul class="smalltext">
@@ -242,6 +275,17 @@
         // });
     </script>
 
+    <!-- <script>
+        $(function () {
+            $(".js-sub-img .video-preview").on("click", function () {
+                var videoId = $(this).data("video-id");
+                // 動画プレーヤーのHTMLを生成
+                var videoPlayerHtml = '<iframe width="560" height="315" src="https://www.youtube.com/embed/8qxqlXGfT-I?si=_v_jcvmCuqSl1nTD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+                // 動画プレーヤーを表示
+                $(this).html(videoPlayerHtml);
+            });
+        });
+    </script> -->
 
 </body>
 
